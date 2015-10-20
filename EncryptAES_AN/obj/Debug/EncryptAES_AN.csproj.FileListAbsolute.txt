@@ -1,0 +1,7 @@
+\\vmware-host\shared folders\documents\visual studio 2013\Projects\EncryptAES_AN\EncryptAES_AN\bin\Debug\EncryptAES_AN.exe.config
+C:\Users\metap\Desktop\Prog C#\EncryptAES_AN\EncryptAES_AN\bin\Debug\EncryptAES_AN.exe.config
+C:\Users\metap\Desktop\Prog C#\EncryptAES_AN\EncryptAES_AN\bin\Debug\EncryptAES_AN.exe
+C:\Users\metap\Desktop\Prog C#\EncryptAES_AN\EncryptAES_AN\bin\Debug\EncryptAES_AN.pdb
+C:\Users\metap\Desktop\Prog C#\EncryptAES_AN\EncryptAES_AN\obj\Debug\EncryptAES_AN.csprojResolveAssemblyReference.cache
+C:\Users\metap\Desktop\Prog C#\EncryptAES_AN\EncryptAES_AN\obj\Debug\EncryptAES_AN.exe
+C:\Users\metap\Desktop\Prog C#\EncryptAES_AN\EncryptAES_AN\obj\Debug\EncryptAES_AN.pdb
