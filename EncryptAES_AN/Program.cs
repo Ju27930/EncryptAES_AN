@@ -12,7 +12,14 @@ namespace EncryptAES_AN
     {
         static void Main(string[] args)
         {
+            string texteEncrypte = EncryptString("Le texte a chiffrer", "laclefait16carac", "vidoitfairelamemetaa");
+            Console.WriteLine(texteEncrypte);
+
+            Console.WriteLine(DecryptString(texteEncrypte, "laclefait16carac", "vidoitfairelamemetaa"));
+
+            Console.ReadLine();
         }
+
 
         private static string EncryptString(string clearText, string strKey, string strIv)
         {
@@ -88,7 +95,5 @@ namespace EncryptAES_AN
             return Encoding.UTF8.GetString(plainTextData, 0, decryptedByteCount);
 
         }
-
-
     }
 }
