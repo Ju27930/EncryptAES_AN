@@ -19,3 +19,6 @@ DecryptString("Le texte a dechiffrer", "laclefait16carac", "vidoitfairelamemetai
 
 EncryptString(Le texte qui doit être dechiffré, la clé ( 16 caracteres ), Le vecteur d'initialisation qui doit être de la meme taille que le texte a chiffrer)
 
+
+
+( les sources proviennent de http://webman.developpez.com/articles/dotnet/aes-rijndael/ )
