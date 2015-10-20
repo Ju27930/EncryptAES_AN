@@ -12,8 +12,6 @@ namespace EncryptAES_AN
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(EncryptString("Texte a chiffrer", "clé", "vecteur d'initialisation"));
-            Console.ReadLine();
         }
 
         private static string EncryptString(string clearText, string strKey, string strIv)
@@ -57,6 +55,40 @@ namespace EncryptAES_AN
 
 
         }
+
+        public static string DecryptString(string cipherText, string strKey, string strIv)
+        {
+
+            // Place le texte à déchiffrer dans un tableau d'octets
+            byte[] cipheredData = Convert.FromBase64String(cipherText);
+
+            // Place la clé de déchiffrement dans un tableau d'octets
+            byte[] key = Encoding.UTF8.GetBytes(strKey);
+
+            // Place le vecteur d'initialisation dans un tableau d'octets
+            byte[] iv = Encoding.UTF8.GetBytes(strIv);
+
+            RijndaelManaged rijndael = new RijndaelManaged();
+            rijndael.Mode = CipherMode.CBC;
+
+
+            // Ecris les données déchiffrées dans le MemoryStream
+            ICryptoTransform decryptor = rijndael.CreateDecryptor(key, iv);
+            MemoryStream ms = new MemoryStream(cipheredData);
+            CryptoStream cs = new CryptoStream(ms, decryptor, CryptoStreamMode.Read);
+
+            // Place les données déchiffrées dans un tableau d'octet
+            byte[] plainTextData = new byte[cipheredData.Length];
+
+            int decryptedByteCount = cs.Read(plainTextData, 0, plainTextData.Length);
+
+            ms.Close();
+            cs.Close();
+
+            return Encoding.UTF8.GetString(plainTextData, 0, decryptedByteCount);
+
+        }
+
 
     }
 }
